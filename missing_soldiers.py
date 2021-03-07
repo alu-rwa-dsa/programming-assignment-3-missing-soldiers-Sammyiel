@@ -1,13 +1,19 @@
 # Write your code here
-first_input = int(input())
+# Take this algorithm
+# For any input of x, y and d
+# Calculate the range of possible x points within
+# Append the range to a list
+# Finally count the non-recurring points #
 
-adding = 0
 
-for _ in range(first_input):
-    listed = [n for n in input().split(' ')]
-    adding += int(listed[2]) + 1
+list_of_x_points = []
 
-print(adding)
+for _ in range(int(input())):
+    listed = list(input().split(' '))
+    for val in range(int(listed[0]), int(listed[2]) + int(listed[0]) + 1):
+        if val not in list_of_x_points:
+            list_of_x_points.append(val)
 
-# sample input = 2, 1  1  4, 7  3  5 and sample output is 11
+
+print(len(list_of_x_points))
 
